@@ -1,0 +1,67 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+/* Header Syles */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1em auto;
+}
+
+/*------ Main Styles ------ */
+/* spacing of contents in page */
+section , form {
+    width: 70%;
+    margin: 1em auto;
+}
+
+main .box1 , main .box2 {
+    width: 32em;
+}
+
+article , .projects , .contact{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+}
+
+.container.extra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.interest {
+    width: 30%;
+}
+
+.education {
+    width: 60%;
+}
+
+.intro .box2 .container , .item {
+    margin: 1em auto;
+}
+
+
+
+
+
+/* Footer Section */
+footer .box1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer p {
+    text-align: center;
+}
