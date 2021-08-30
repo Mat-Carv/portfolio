@@ -10,33 +10,32 @@
 <body>
     
     <header>
-        <div>
-            <h1>Matheus Carvalho</h1>
+        <div class="topnav">
+            <div class="name">
+                <h2>Matheus Carvalho</h2>
+            </div>
+            <div class="sections">
+                <nav>
+                    <a href="#">About me</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
         </div>
-        <div>
-            <nav>
-                <a href="">Section 1</a>
-                <a href="">Section 2</a>
-                <a href="">Section 3</a>
-                <a href="">Section 4</a>
-                <a href="">Section 4</a>
-                <a href="">Section 4</a>
-            </nav>
-        </div>
-        
-        <!-- Normal/Background Image? -->
     </header>
 
     <main>
         <!-- LOOK FOR BETTER SEMANTIC TAG -->
-        <section class="info_about_me">
+        <section class="info_about_me" id="about_me">
             
             <article class="intro">
                 <!-- BOX 1 SECTION 1 -->
                 <div class="box1">
-                    <img src="" alt="headshot">
-                    <h4>Matheus Candido Carvalho</h4>
-                    <h6>Company Name</h6>
+                    <img src="img/headshot.jpeg" alt="headshot">
+                    <h1>Matheus Candido Carvalho</h1>
+                    <h5>Company Name</h5>
                 </div>
                 <!-- BOX 2 SECTION 1 -->
                 <div class="box2">
@@ -57,12 +56,12 @@
                         </div>
                         <div class="education">
                             <h3>Education</h3>
-                                <div class="item1">
+                                <div class="item">
                                     <h4>Institute</h4>
                                     <h6>201X - 201Y</h6>
                                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, soluta voluptate esse consequuntur fugit in quis aliquam totam amet, officiis maxime nesciunt? Sapiente sed eaque nam. Unde saepe placeat qui.</p>
                                 </div>
-                                <div class="item2">
+                                <div class="item">
                                     <h4>Institute</h4>
                                     <h6>201X - 201Y</h6>
                                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, soluta voluptate esse consequuntur fugit in quis aliquam totam amet, officiis maxime nesciunt? Sapiente sed eaque nam. Unde saepe placeat qui.</p>
@@ -72,7 +71,7 @@
                 </div>
             </article>
             
-            <article class="experience">
+            <article class="experience" id="experience">
                 <div class="box1">
                     <h2>Experience</h2>
                 </div>
@@ -99,7 +98,7 @@
 
         <section>    
 
-            <article class="skills">
+            <article class="skills" id="skills">
                <div class="box1">
                     <h2>Skills</h2>
                </div>
@@ -116,40 +115,43 @@
 
         </section>
         <!-- LOOK FOR BETTER SEMANTIC TAG -->
-        <section class="projects">
+        <div class="background_projects">
+            <section class="projects" id="projects">
             
-            <div class="box1">
-                <h2>Projects</h2>
-            </div>
-            <!-- Photos & Links to GitHub -->
-            <div class="box2">
-                <div class="item">
-                    <div class="container">
-                        <h3>Project Name</h3>
-                        <p>Brief Description</p>
-                    </div>
-                    <a href=""><img src="" alt="Project Icon"></a>
+                <div class="box1">
+                    <h2>Projects</h2>
                 </div>
-                <div class="item">
-                    <div class="container">
-                        <h3>Project Name</h3>
-                        <p>Brief Description</p>
+                <!-- Photos & Links to GitHub -->
+                <div class="box2">
+                    <div class="item">
+                        <div class="container">
+                            <h3>Project Name</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <a href=""><img src="img/project_1.jpg" alt="Project Icon"></a>
                     </div>
-                    <a href=""><img src="" alt="Project Icon"></a>
-                </div>
-                <div class="item">
-                    <div class="container">
-                        <h3>Project Name</h3>
-                        <p>Brief Description</p>
+                    <div class="item">
+                        <div class="container">
+                            <h3>Project Name</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <a href=""><img src="img/project_2.jpg" alt="Project Icon"></a>
                     </div>
-                    <a href=""><img src="" alt="Project Icon"></a>
+                    <div class="item">
+                        <div class="container">
+                            <h3>Project Name</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <a href=""><img src="img/project_3.png" alt="Project Icon"></a>
+                    </div>
+    
                 </div>
-
-            </div>
-
-        </section>
+    
+            </section>
+        </div>
+        
         <!-- LOOK FOR BETTER SEMANTIC TAG -->
-        <form action="" method="get" class="contact">
+        <form action="" method="get" class="contact" id="contact">
             <div class="box1">
                 <h2>Contact</h2>
             </div>
@@ -167,7 +169,7 @@
                     <label for="msg">Message: </label>
                     <input type="text" name="msg" id="msg" class="msg_box">
                 </div>
-                <input type="submit">
+                <input class="send" type="submit">
             </div>
 
         </form>
@@ -177,16 +179,16 @@
        
         <div class="box1">
             <div class="icon">
-                <img src="" alt="Social Media">
+                <a href=""><img src="img/email.png" alt="Social Media"></a>
             </div>
             <div class="icon">
-                <img src="" alt="Social Media">
+                <a href=""><img src="img/instagram.png" alt="Social Media"></a>
             </div>
             <div class="icon">
-                <img src="" alt="Social Media">
+                <a href=""><img src="img/github.png" alt="Social Media"></a>
             </div>
             <div class="icon">
-                <img src="" alt="Social Media">
+                <a href=""><img src="img/linkedin.png" alt="Social Media"></a>
             </div>
         </div>
         <div class="box2">

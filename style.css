@@ -1,3 +1,4 @@
+/* Style Reset */
 * {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -10,58 +11,280 @@
     box-sizing: border-box;
 }
 
+/* Fonts and Text Sizing */
+
+/* Main Header, Name under Image */
+h1 {
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+/* Interests and Education Titles */
+h2 {
+    font-size: 1.6em;
+}
+
+/* Main Article Titles */
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h6 {
+    font-size: 0.9em;
+    color: gray;
+    padding: 0.3em 1em;
+}
+
 /* Header Syles */
-header {
+.topnav {
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    margin: 1em auto;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: gray;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.5em;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.topnav h2 {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.5em;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
 /*------ Main Styles ------ */
-/* spacing of contents in page */
+
+main {
+    margin-top: 8em;
+}
+
 section , form {
-    width: 70%;
+    width: 90%;
     margin: 1em auto;
 }
-
-main .box1 , main .box2 {
-    width: 32em;
-}
-
+/* Setting Flex to the main sections */
 article , .projects , .contact{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin: 2rem auto;
 }
 
-.container.extra {
-    display: flex;
-    justify-content: space-between;
-}
-
-.interest {
-    width: 30%;
-}
-
-.education {
-    width: 60%;
-}
-
+/* Margin for contents of .intro and all .item's */
 .intro .box2 .container , .item {
     margin: 1em auto;
 }
 
+/* Main Division Boxes width, minimum sized screen */
+main .box1 {
+    width: 100%;
+}
 
+main .box2 {
+    width: 100%;
+}
+
+/* Setting Flex to Interests and Education Section */
+.container.extra {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Interests and Education box width, minimum sized screen  */
+.interests {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.education {
+    width: 100%;
+    margin: 1em 0;
+}
+
+/* Resizing Boxes, screen width > 700px */
+@media only screen and (min-width: 700px)  {
+    
+    section , form {
+        width: 90%;
+        margin: 1em auto;
+    }
+    
+    main .box1 {
+        width: 30%;
+    }
+    
+    main .box2 {
+        width: 65%;
+    }
+
+    .interests {
+        width: 30%;
+    }
+    
+    .education {
+        width: 70%;
+    }
+
+    .topnav a {
+        font-size: 1em;
+    }
+    
+    .topnav h2 {
+        font-size: 1.5em;  
+    }
+    
+}
+
+/* Resizing Boxes, screen width > 1300px */
+@media only screen and (min-width: 1300px)  {
+    
+    section , form {
+        width: 80%;
+        margin: 1em auto;
+    }
+    
+    main .box1 {
+        width: 30%;
+    }
+    
+    main .box2 {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 2em;
+        padding: 1em;
+    }
+    
+}
+
+/* Headshot Box */
+
+.intro img {
+    width: 12em;
+    height: 12em;
+    left: 50%;
+    border: 0em solid;
+    border-radius: 50%;
+}
+
+.intro .box1 {
+    text-align: center;
+}
+
+/* Education Section */
+
+.education .item {
+    background-color: rgb(243, 243, 243);
+    border: 0.05em solid gray;
+    padding: 0.5em 1em;
+}
+
+/* Experience Section */
+
+.experience .item {
+    background-color: rgb(243, 243, 243);
+    border: 0.05em solid gray;
+    padding: 0.5em 1em;
+}
+
+/* Projects Section */
+
+.projects .item {
+    display: flex;
+}
+
+.projects .item .container {
+    width: auto;
+    height: 7em;
+    flex-grow: 1;
+    background-color: rgb(243, 243, 243);
+    border: 0.05em solid gray;
+    padding: 0.5em 1em;
+}
+
+
+
+/* Project Images */
+.projects img {
+    width: 7em;
+    height: 7em;
+    border: 0.05em solid gray;
+    margin-left: 0.2em;
+}
+
+/* Contact Section */
+
+.contact input {
+    width: 100%;
+    height: 1.5em;
+    border: 0.05em solid gray;
+    margin: 0.5em 0;
+}
+
+.contact input.msg_box {
+    height: 10.5em;
+}
+
+.contact input.send {
+    width: 4em;
+}
 
 
 
 /* Footer Section */
+footer {
+    background-color: cornflowerblue;
+}
+
 footer .box1 {
     display: flex;
     justify-content: space-around;
+    padding: 2em 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+footer p {
+    color:white;
+    padding: 1em;
 }
 
 footer p {
     text-align: center;
+}
+
+footer .icon img {
+    width: 4em;
+    height: 4em;
+}
+
+.background_projects {
+    width: 100%;
+    background-image: url("https://i.icanvas.com/list-hero/katsushika-hokusai.jpg");
 }
