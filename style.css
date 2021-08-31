@@ -12,11 +12,10 @@
 }
 
 /* Fonts and Text Sizing */
-
 /* Main Header, Name under Image */
 h1 {
     font-size: 1.5em;
-    padding: 1em;
+    /* padding-left: 1em; */
 }
 
 /* Interests and Education Titles */
@@ -37,6 +36,25 @@ h6 {
     font-size: 0.9em;
     color: gray;
     padding: 0.3em 1em;
+}
+
+/* Setting Footer to stay at the bottom of the page */
+
+html, body{
+    height:100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
 }
 
 /* Header Syles */
@@ -79,15 +97,75 @@ h6 {
 /*------ Main Styles ------ */
 
 main {
-    margin-top: 8em;
+    margin-top: 3em;
 }
 
 section , form {
     width: 90%;
     margin: 1em auto;
 }
+
+/* Landing Page Styles */
+.landing {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://alivedesktop.com/wp-content/uploads/2017/07/Windows-XP-default-wallpaper.jpg");
+    background-size: auto;
+    background-position: 50% 50%;
+}
+
+.landing .center_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.landing .bg_container {
+    width: 100%;
+    background-color: rgba(112, 210, 255, 0.6);
+}
+
+.landing h1 {
+    color: #f2f2f2;
+    font-size: 2em;
+}
+
+.landing img {
+    width: 20em;
+    height: 20em;
+    border: 0.1em solid white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.landing nav {
+    display: flex;
+    justify-content: center;
+}
+
+.landing nav a {
+    width: 7em;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1em;
+    border: 0.1em solid white;
+    margin: 0.5em;
+}
+
+.landing nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
 /* Setting Flex to the main sections */
-article , .projects , .contact{
+article , .blog_posts , .contact , .mycontacts {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -178,9 +256,13 @@ main .box2 {
 
     h1 {
         font-size: 2em;
-        padding: 1em;
+        /* padding: 1em; */
     }
-    
+
+    main.blog {
+        margin: 3em auto 0;
+    }
+
 }
 
 /* Headshot Box */
@@ -215,11 +297,15 @@ main .box2 {
 
 /* Projects Section */
 
-.projects .item {
+.blog_posts , .skills , .intro , .experience, .mycontacts {
+    padding-top: 1em;
+}
+
+.blog_posts .item {
     display: flex;
 }
 
-.projects .item .container {
+.blog_posts .item .container {
     width: auto;
     height: 7em;
     flex-grow: 1;
@@ -230,15 +316,45 @@ main .box2 {
 
 
 
-/* Project Images */
-.projects img {
+/* Recent Blog Posts Images */
+.blog_posts img {
     width: 7em;
     height: 7em;
     border: 0.05em solid gray;
+    background-color: gray;
     margin-left: 0.2em;
 }
 
-/* Contact Section */
+/* Cantact Me Page */
+
+.contact_page h1 {
+    text-align: center;
+    margin: 0.7em;
+}
+
+.contact_links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.contact_links .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_page img {
+    width: auto;
+    height: 10em;
+    background-color: darkslategray;
+    border: 0.05em solid gray;
+    padding: 0.5em;
+    border-radius: 15%;
+    margin: 1em;
+}
 
 .contact input {
     width: 100%;
@@ -254,6 +370,8 @@ main .box2 {
 .contact input.send {
     width: 4em;
 }
+
+
 
 
 
@@ -284,7 +402,48 @@ footer .icon img {
     height: 4em;
 }
 
+/* Background image Test */
 .background_projects {
     width: 100%;
     background-image: url("https://i.icanvas.com/list-hero/katsushika-hokusai.jpg");
+}
+
+/* Blog Post Page */
+
+main.blog {
+    width: 70%;
+    margin: 3em auto 0;
+}
+
+.blog section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.author_details {
+    display: flex;
+    align-self: flex-start;
+    margin: 2em 0;
+}
+
+.author_details img {
+    width: 6em;
+    height: 6em;
+    border: 0em solid;
+    border-radius: 50%;
+}
+
+.author_details h3 , .author_details h6 {
+    margin: 0.5em 1em;
+}
+
+img.main_post {
+    width: 20em;
+    height: 20em;
+    margin: 1em;
+}
+
+.blog p {
+    margin: 1em;
 }
