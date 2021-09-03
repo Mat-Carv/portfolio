@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
     <title>Matheus Carvalho Portfolio</title>
 </head>
 
@@ -19,7 +22,7 @@
                 <nav>
                     <a href="index.html">Home</a>
                     <a href="bio.html">About me</a>
-                    <a href="bio.html#blog_posts">Blog</a>
+                    <a target="_blank" href="blog.html">Blog</a>
                     <a href="contactme.html">Contact</a>
                 </nav>
             </div>
@@ -28,44 +31,53 @@
 
     <main class="contact_page">
         
-        <h1>Contact Me</h1>
-        <div class="contact_links">
+        <div class="background my_links">
             <div class="container">
-                <a href="mailto:cas0220112@coderacademy.edu.au"><img src="img/email.png" alt="Email Icon"></a>
-                <h3>E-mail</h3>
+                <h1>Contact Me</h1>
+                <div class="contact_links">
+                    <div class="container">
+                        <a target="_blank" href="mailto:cas0220112@coderacademy.edu.au"><img src="img/email.png" alt="Email Icon"></a>
+                        <h3>E-mail</h3>
+                    </div>
+                    <div class="container">
+                        <a target="_blank" href="https://github.com/Mat-Carv"><img src="img/github.png" alt="Github Icon"></a>
+                        <h3>GitHub</h3>
+                    </div>
+                    <div class="container">
+                        <a target="_blank" href="https://au.linkedin.com/"><img src="img/linkedin.png" alt="Linkedin Icon"></a>
+                        <h3>Linkedin</h3>
+                    </div>
+                </div>
             </div>
-            <div class="container">
-                <a href="https://github.com/Mat-Carv"><img src="img/github.png" alt="Github Icon"></a>
-                <h3>GitHub</h3>
-            </div>
-            <div class="container">
-                <a href="https://au.linkedin.com/"><img src="img/linkedin.png" alt="Linkedin Icon"></a>
-                <h3>Linkedin</h3>
-            </div>
-
+            
         </div>
 
-        <form action="" method="get" class="contact" id="contact">
-            <div class="box1">
-                <h2>Contact</h2>
-            </div>
+        <div class="background message_form">
+            <form action="/action_page.php" method="get" class="contact" id="contact">
+                <div class="box1">
+                    <h2>Message me</h2>
+                </div>
+    
+                <div class="box2">
+                    <div class="name">
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="email">
+                        <label for="email">E-mail: </label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="msg">
+                        <label for="msg">Message: </label>
+                        <textarea name="msg" id="msg" class="msg_box"></textarea>
+                    </div>
+                    <input class="send" type="submit">
+                </div>
+            </form>
+        </div>
+        
 
-            <div class="box2">
-                <div class="name">
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" id="name">
-                </div>
-                <div class="email">
-                    <label for="email">E-mail: </label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="msg">
-                    <label for="msg">Message: </label>
-                    <input type="text" name="msg" id="msg" class="msg_box">
-                </div>
-                <input class="send" type="submit">
-            </div>
-        </form>
+        
 
     </main>
 

@@ -1,6 +1,6 @@
 /* Style Reset */
 * {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     border: 0;
@@ -9,32 +9,49 @@
     vertical-align: baseline;
     background: transparent;
     box-sizing: border-box;
+    
 }
+
+:root {
+    --platinum: rgb(228, 222, 220);
+    --pink: rgb(221, 190, 187);
+    --cyan: rgb(91, 192, 235);
+    --onyx: rgb(49, 54, 56);
+    --yellow: rgb(253, 231, 76);
+  }
 
 /* Fonts and Text Sizing */
 /* Main Header, Name under Image */
 h1 {
     font-size: 1.5em;
+    font-family: 'Permanent Marker', cursive;
+    color: var(--onyx);
     /* padding-left: 1em; */
 }
 
 /* Interests and Education Titles */
 h2 {
     font-size: 1.6em;
+    font-family: 'Permanent Marker', cursive;
+    color: var(--onyx);
 }
 
 /* Main Article Titles */
 h3 {
     font-size: 1.3em;
+    font-family: 'Permanent Marker', cursive;
+    color: var(--onyx);
 }
 
 h4 {
     font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
 }
 
 h6 {
+    font-family: 'Roboto', sans-serif;
     font-size: 0.9em;
-    color: gray;
+    color: var(--pink);
     padding: 0.3em 1em;
 }
 
@@ -60,27 +77,28 @@ footer {
 /* Header Syles */
 .topnav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: gray;
+    background-color: var(--onyx);
     overflow: hidden;
     position: fixed;
     width: 100%;
     top: 0%;
+    border-bottom: 0.1em solid rgba(128, 128, 128, 0.5);
+
 }
 
 .topnav a {
-    float: left;
+    font-family: 'Permanent Marker', cursive;
     color: #f2f2f2;
     text-align: center;
-    padding: 0.5em;
+    padding: 1.1em 0.5em;
     text-decoration: none;
     font-size: 0.9em;
 }
 
 .topnav h2 {
-    float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 0.5em;
@@ -90,28 +108,35 @@ footer {
 
 
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: var(--yellow);
+    color: var(--onyx);
+}
+
+.topnav nav {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 /*------ Main Styles ------ */
 
 main {
-    margin-top: 3em;
+    margin-top: 7em;
 }
 
 section , form {
     width: 90%;
-    margin: 1em auto;
+    margin: 0 auto;
 }
 
 /* Landing Page Styles */
-.landing {
+main.landing {
     margin-top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://alivedesktop.com/wp-content/uploads/2017/07/Windows-XP-default-wallpaper.jpg");
+    background-color: var(--onyx);
     background-size: auto;
     background-position: 50% 50%;
 }
@@ -124,38 +149,48 @@ section , form {
     text-align: center;
 }
 
+.landing .bg_image {
+    width: 100%;
+    background-image: url("https://previews.123rf.com/images/vectora/vectora1601/vectora160100351/51198810-seamless-monochromatic-pattern-repeatable-background-vector-.jpg");
+}
+
 .landing .bg_container {
     width: 100%;
-    background-color: rgba(112, 210, 255, 0.6);
+    
+    background-color: rgba(91, 192, 235, 0.98);
+    /* background: linear-gradient(0deg, var(--onyx), var(--cyan) 0.5% 99.5%, var(--onyx) ); */
+    /* border-top: 0.2em solid rgba(128, 128, 128, 0.3); */
+    /* border-bottom: 0.2em solid rgba(128, 128, 128, 0.3); */
 }
 
 .landing h1 {
-    color: #f2f2f2;
-    font-size: 2em;
+    color: var(--onyx);
+    font-size: 2.5em;
+    margin: 0.5em;
 }
 
 .landing img {
     width: 20em;
     height: 20em;
-    border: 0.1em solid white;
+    border: 0.1em solid rgba(128, 128, 128, 0.3);
     border-radius: 50%;
     text-align: center;
 }
 
 .landing nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .landing nav a {
-    width: 7em;
-    color: #f2f2f2;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1em;
+    color: var(--onyx);
     text-align: center;
     padding: 1em;
     text-decoration: none;
-    font-size: 1em;
-    border: 0.1em solid white;
-    margin: 0.5em;
+
 }
 
 .landing nav a:hover {
@@ -163,13 +198,27 @@ section , form {
     color: black;
 }
 
+@media only screen and (min-width: 520px) {
+    
+    main {
+        margin-top: 3.6em;
+    }
+
+    .topnav {
+        justify-content: space-between;
+    }
+
+    .landing nav a {
+        font-size: 1.5em;
+    }
+}
 
 /* Setting Flex to the main sections */
 article , .blog_posts , .contact , .mycontacts {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 2rem auto;
+    margin: 0 auto;
 }
 
 /* Margin for contents of .intro and all .item's */
@@ -209,7 +258,6 @@ main .box2 {
     
     section , form {
         width: 90%;
-        margin: 1em auto;
     }
     
     main .box1 {
@@ -217,7 +265,7 @@ main .box2 {
     }
     
     main .box2 {
-        width: 65%;
+        width: 70%;
     }
 
     .interests {
@@ -243,7 +291,6 @@ main .box2 {
     
     section , form {
         width: 80%;
-        margin: 1em auto;
     }
     
     main .box1 {
@@ -260,7 +307,7 @@ main .box2 {
     }
 
     main.blog {
-        margin: 3em auto 0;
+        /* margin: 3.2em auto 0; */
     }
 
 }
@@ -271,7 +318,7 @@ main .box2 {
     width: 12em;
     height: 12em;
     left: 50%;
-    border: 0em solid;
+    border: 0.1em solid rgba(128, 128, 128, 0.1);
     border-radius: 50%;
 }
 
@@ -283,22 +330,67 @@ main .box2 {
 
 .education .item {
     background-color: rgb(243, 243, 243);
-    border: 0.05em solid gray;
+    border: 0.05em solid rgba(128, 128, 128, 0.1);
+    border-radius: 0.3em;
     padding: 0.5em 1em;
+}
+ 
+/* Skills Section */
+
+.background.skills {
+    background-color: var(--onyx);
+}
+
+.skills h2 {
+    margin: 1em;
+    color: white;
+}
+
+.tech_icons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.tech_icons .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills img {
+    width: auto;
+    height: 10em;
+    background-color: var(--onyx);
+    border: 0.05em solid gray;
+    padding: 0.5em;
+    border-radius: 15%;
+    margin: 1em;
 }
 
 /* Experience Section */
 
 .experience .item {
     background-color: rgb(243, 243, 243);
-    border: 0.05em solid gray;
+    border: 0.05em solid rgba(128, 128, 128, 0.2);
+    border-radius: 0.3em;
     padding: 0.5em 1em;
 }
 
-/* Projects Section */
+.background.experience {
+    background-color: var(--cyan);
+}
+
+/* Recent Blog Posts Section */
+
+.blog_posts h2 {
+    color: var(--onyx);
+}
 
 .blog_posts , .skills , .intro , .experience, .mycontacts {
-    padding-top: 1em;
+    padding: 1em 0;
 }
 
 .blog_posts .item {
@@ -310,11 +402,15 @@ main .box2 {
     height: 7em;
     flex-grow: 1;
     background-color: rgb(243, 243, 243);
-    border: 0.05em solid gray;
+    border: 0.05em solid rgba(156, 152, 152, 0.5);
     padding: 0.5em 1em;
 }
 
-
+.background.blog_posts {
+    width: 100%;
+    height: 100%;
+    background-color: var(--platinum);
+}
 
 /* Recent Blog Posts Images */
 .blog_posts img {
@@ -325,100 +421,22 @@ main .box2 {
     margin-left: 0.2em;
 }
 
-/* Cantact Me Page */
-
-.contact_page h1 {
-    text-align: center;
-    margin: 0.7em;
-}
-
-.contact_links {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 85%;
-    margin: 0 auto;
-}
-
-.contact_links .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact_page img {
-    width: auto;
-    height: 10em;
-    background-color: darkslategray;
-    border: 0.05em solid gray;
-    padding: 0.5em;
-    border-radius: 15%;
-    margin: 1em;
-}
-
-.contact input {
-    width: 100%;
-    height: 1.5em;
-    border: 0.05em solid gray;
-    margin: 0.5em 0;
-}
-
-.contact input.msg_box {
-    height: 10.5em;
-}
-
-.contact input.send {
-    width: 4em;
-}
-
-
-
-
-
-/* Footer Section */
-footer {
-    background-color: cornflowerblue;
-}
-
-footer .box1 {
-    display: flex;
-    justify-content: space-around;
-    padding: 2em 0;
-    margin: 0 auto;
-    width: 80%;
-}
-
-footer p {
-    color:white;
-    padding: 1em;
-}
-
-footer p {
-    text-align: center;
-}
-
-footer .icon img {
-    width: 4em;
-    height: 4em;
-}
-
-/* Background image Test */
-.background_projects {
-    width: 100%;
-    background-image: url("https://i.icanvas.com/list-hero/katsushika-hokusai.jpg");
-}
-
 /* Blog Post Page */
 
 main.blog {
-    width: 70%;
-    margin: 3em auto 0;
+    width: 100%;
+    margin: 3.25em auto 0;
 }
 
 .blog section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2em;
+}
+
+.blog h1 , .blog h3 , .blog time {
+    text-align: center;
 }
 
 .author_details {
@@ -445,5 +463,107 @@ img.main_post {
 }
 
 .blog p {
+    margin: 1em auto;
+}
+
+/* Cantact Me Page */
+
+main.contact_page {
+    display: flex;
+    flex-direction: column;
+}
+
+.background.my_links {
+    flex: 0 1 auto;
+}
+
+.background.message_form {
+    background-color: var(--cyan);
+    flex: 1 1 auto;
+}
+
+.contact_page h1 {
+    text-align: center;
+}
+
+.contact_links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.contact_links .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_page img {
+    width: auto;
+    height: 10em;
+    background-color: var(--onyx);
+    border: 0.05em solid gray;
+    padding: 0.5em;
+    border-radius: 15%;
     margin: 1em;
+}
+
+.contact input {
+    width: 100%;
+    height: 1.5em;
+    border: 0.05em solid rgba(128, 128, 128, 0.4);
+    background-color: whitesmoke;
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+}
+
+.contact input.send {
+    width: 4em;
+}
+
+.my_links .container , form.contact {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.contact textarea {
+    height: 10.5em;
+    width: 100%;
+    rows: 7;
+    cols: 50;
+    border: 0.05em solid rgba(128, 128, 128, 0.4);
+    background-color: whitesmoke;
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+    
+}
+
+/* Footer Section */
+
+footer {
+    background-color: var(--onyx);
+}
+
+footer .box1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+footer p {
+    color: white;
+    padding: 1em;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer .icon img {
+    width: 4em;
+    height: 4em;
 }
