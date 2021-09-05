@@ -1,0 +1,59 @@
+commit 6c61715607dee8dc24d0e3d11dab74e340cff609
+Author: Matheus Carvalho <cas0220112@coderacademy.edu.au>
+Date:   Sun Sep 5 12:35:27 2021 +1000
+
+    Fixed form from contact me page not growing
+
+commit dc9f0037684ed52f433c374e0441276a995076ad
+Author: Matheus Carvalho <cas0220112@coderacademy.edu.au>
+Date:   Sun Sep 5 12:15:20 2021 +1000
+
+    Removed redundant tags and elements; added better comments on all files
+
+commit 90bc8db42c94a21a8a2f8895bf7b9d6d3734c134
+Author: Matheus Carvalho <cas0220112@coderacademy.edu.au>
+Date:   Sat Sep 4 23:42:31 2021 +1000
+
+    Added CV icon to the footer of all relevant pages; Ajusted spacing of the footer; Added Icons to be displayed in the skills section; Added Favicon in the tab; Fixed spacing and positioning issues in the intro section and Blog; Checked and ajusted responsiveness of all pages; Inserted Actual Information in some sections of bio
+
+commit 768e95c6164e58cf874861d3d1f53581c322024b
+Author: Matheus Carvalho <cas0220112@coderacademy.edu.au>
+Date:   Sat Sep 4 23:30:16 2021 +1000
+
+    Added icons for the skills section, New images for the Recent Blog post Examples, An image used for the background in the Landing Page, Favicon Image and CV pdf
+
+commit f5d19fc8c7fb6a0a21fe3f2be9cb4867c320d952
+Author: Matheus Carvalho <cas0220112@coderacademy.edu.au>
+Date:   Fri Sep 3 22:08:15 2021 +1000
+
+    Made the Recent Posts section in bio into its own page and added posts to the list. Added colors and fonts, made more divs in html in order to use background images taking the whole width of the page, added mackground colors and images, fixed small issues related to coloring, sizing, positioning, responsiveness and functionality
+
+commit 107efdfaa534d9fe3b78a605f948623cc8377f7c
+Author: Matheus Carvalho <cas0220112@coderacademy.edu.au>
+Date:   Tue Aug 31 20:54:52 2021 +1000
+
+    Added, Structured and Styled Biography, Contact Me and Blog Post pages, moving over some components from the original index file.
+
+commit fff669453aff9c7e07198779740a20f94e2bb95c
+Author: Matheus Carvalho <cas0220112@coderacademy.edu.au>
+Date:   Mon Aug 30 22:16:37 2021 +1000
+
+    Set up Nav bar fixed at the top; Set up responsive design with @media; Added all images missing from html and styled with css; Put borders around some section items; Started testing ways of inserting background images and colors across the full width of the page (div.background_projects)
+
+commit 75e4b0fe22d716e385caac035db1d007ce302406
+Author: Matheus Carvalho <cas0220112@coderacademy.edu.au>
+Date:   Sun Aug 29 18:27:41 2021 +1000
+
+    Set up basic layout of elements with css and ajusted some tags for better organization
+
+commit 725101781456ef167f80cfbab789ba1955ef2929
+Author: Matheus Carvalho <cas0220112@coderacademy.edu.au>
+Date:   Sun Aug 29 13:31:18 2021 +1000
+
+    structured html into boxes for organizing in css
+
+commit b01ccee9d158bba41881ecffc68b6b2ed504d57c
+Author: Matheus Carvalho <cas0220112@coderacademy.edu.au>
+Date:   Fri Aug 27 16:56:45 2021 +1000
+
+    Initial commit. Set up basic html structure
