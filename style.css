@@ -440,10 +440,16 @@ img.main_post {
 
 
 /* Setting background colors; Setting the message form section to grow and occupy remaining space in the page */
+.contact_page {
+    display: flex;
+    flex-direction: column;
+}
+
 .background.my_links {
     flex: 0 1 auto;
     background-color: var(--platinum);
 }
+
 .background.message_form {
     background-color: var(--cyan);
     flex: 1 1 auto;
