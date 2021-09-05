@@ -11,7 +11,7 @@
     box-sizing: border-box;
     
 }
-
+/* Setting Color Palette for easy access in this style sheet */
 :root {
     --platinum: rgb(228, 222, 220);
     --pink: rgb(221, 190, 187);
@@ -21,22 +21,19 @@
   }
 
 /* Fonts and Text Sizing */
-/* Main Header, Name under Image */
+
 h1 {
     font-size: 1.5em;
     font-family: 'Permanent Marker', cursive;
     color: var(--onyx);
-    /* padding-left: 1em; */
 }
 
-/* Interests and Education Titles */
 h2 {
     font-size: 1.6em;
     font-family: 'Permanent Marker', cursive;
     color: var(--onyx);
 }
 
-/* Main Article Titles */
 h3 {
     font-size: 1.3em;
     font-family: 'Permanent Marker', cursive;
@@ -45,48 +42,41 @@ h3 {
 
 h4 {
     font-size: 1.1em;
-    font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+    font-size: 1em;
+    color: rgba(49, 54, 56, 0.8);
 }
 
 h6 {
-    font-family: 'Roboto', sans-serif;
     font-size: 0.9em;
     color: rgba(49, 54, 56, 0.5);
     padding: 0.3em 1em;
 }
 
-/* Setting Footer to stay at the bottom of the page */
-
-html, body{
-    height:100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}
-
-footer {
-    flex-shrink: 0;
-}
-
 /* Header Syles */
+
+/* Setting dimensions, background color and positioning of nav bar, screen < 520px*/
 .topnav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: var(--onyx);
-    overflow: hidden;
     position: fixed;
     width: 100%;
     top: 0%;
     border-bottom: 0.1em solid rgba(128, 128, 128, 0.5);
 
+}
+
+/* Centering elements of the nav box */
+.topnav nav {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .topnav a {
@@ -98,6 +88,11 @@ footer {
     font-size: 0.9em;
 }
 
+.topnav a:hover {
+    background-color: var(--yellow);
+    color: var(--onyx);
+}
+
 .topnav h2 {
     color: #f2f2f2;
     text-align: center;
@@ -106,41 +101,51 @@ footer {
     font-size: 1.5em;
 }
 
-
-.topnav a:hover {
-    background-color: var(--yellow);
-    color: var(--onyx);
-}
-
-.topnav nav {
-    display: flex;
-    align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-/*------ Main Styles ------ */
-
+/* Top clearance from nav bar size, Ajusted for screen size < 520px */
 main {
     margin-top: 7em;
 }
 
+section {
+    padding: 1em 0;
+}
+
+/* Setting content width, Ajusted for screen size < 520px */
 section , form {
     width: 90%;
     margin: 0 auto;
 }
 
+/* Setting Flex to sections with two columns */
+section  , .blog_posts , .contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+/* Margin for contents of .intro and all .item's */
+.intro .box2 .container , .item {
+    margin: 1em auto 0.5em;
+}
+
+/* Main Division Boxes width, screen size < 520px */
+main .box1 , main .box2 {
+    width: 100%;
+}
+
 /* Landing Page Styles */
+
+/* Sizing, setting flex to elements in main, adding background color */
 main.landing {
     margin-top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--onyx);
-    background-size: auto;
-    background-position: 50% 50%;
 }
 
+/* Setting flex to the center box */
 .landing .center_box {
     width: 100%;
     display: flex;
@@ -149,11 +154,13 @@ main.landing {
     text-align: center;
 }
 
+/* Setting background image to the center box */
 .landing .bg_image {
     width: 100%;
     background-image: url("img/background.jpg");
 }
 
+/* Setting semitransparent color on top of image in the centerbox */
 .landing .bg_container {
     width: 100%;
     background-color: rgba(91, 192, 235, 0.98);
@@ -173,6 +180,7 @@ main.landing {
     text-align: center;
 }
 
+/* Setting to flex and positioning the landing page nav bar */
 .landing nav {
     display: flex;
     flex-wrap: wrap;
@@ -194,45 +202,9 @@ main.landing {
     color: black;
 }
 
-/* Setting Flex to the main sections */
-article , .blog_posts , .contact , .mycontacts {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 auto;
-}
+/* Intro Headshot box */
 
-/* Margin for contents of .intro and all .item's */
-.intro .box2 .container , .item {
-    margin: 1em auto 0.5em;
-}
-
-/* Main Division Boxes width, minimum sized screen */
-
-main .box1 , main .box2 {
-    width: 100%;
-}
-
-/* Setting Flex to Interests and Education Section */
-.container.extra {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-/* Interests and Education box width, minimum sized screen  */
-.interests {
-    width: 100%;
-    margin-top: 1em;
-}
-
-.education {
-    width: 100%;
-    margin-top: 1em;
-}
-
-/* Headshot Box */
-
+/* Setting up image and adding adding a border */
 .intro img {
     width: 12em;
     height: 12em;
@@ -246,6 +218,22 @@ main .box1 , main .box2 {
     text-align: center;
 }
 
+/* Setting Flex to Interests and Education Section */
+.container.extra {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Interests Section */
+
+/* Interests and Education box width, minimum sized screen  */
+.interests , .education {
+    width: 100%;
+    margin-top: 1em;
+}
+
+/* Changing list bullet */
 .interests ul {
     list-style-type: circle;
     margin-top: 1em;
@@ -255,21 +243,28 @@ main .box1 , main .box2 {
     padding-bottom: 0.2em;
 }
 
-.education p{
-    margin-top: 0.3em;
-}
-
 /* Education Section */
 
+/* Setting background color and border to the items in .education */
 .education .item {
     background-color: rgb(243, 243, 243);
     border: 0.05em solid rgba(128, 128, 128, 0.1);
     border-radius: 0.3em;
     padding: 0.5em 1em;
 }
+
+.education p{
+    margin-top: 0.3em;
+}
  
 /* Skills Section */
 
+/* Setting flex to column in skills section */
+.skills {
+    flex-direction: column;
+}
+
+/* Background color in skills section */
 .background.skills {
     background-color: var(--onyx);
 }
@@ -279,6 +274,7 @@ main .box1 , main .box2 {
     color: white;
 }
 
+/* Setting flex and positioning of icons */
 .tech_icons {
     display: flex;
     justify-content: space-evenly;
@@ -287,12 +283,7 @@ main .box1 , main .box2 {
     margin: 0 auto;
 }
 
-.tech_icons .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* Setting up the skill icons */
 .skills img {
     width: auto;
     height: 7em;
@@ -302,12 +293,24 @@ main .box1 , main .box2 {
     margin: 1em;
 }
 
+/* Putting the captions under the icons */
+.tech_icons .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .skills figcaption {
     color: white;
 }
 
 /* Experience Section */
 
+.experience {
+    padding: 0.5em 0 0.7em;
+}
+
+/* Setting background color and border to items */
 .experience .item {
     background-color: rgb(243, 243, 243);
     border: 0.05em solid rgba(128, 128, 128, 0.2);
@@ -315,12 +318,14 @@ main .box1 , main .box2 {
     padding: 0.5em 1em;
 }
 
+/* Setting background color to the section */
 .background.experience {
     background-color: var(--cyan);
 }
 
-/* Recent Blog Posts Section */
+/* Blog Section */
 
+/* Setting flex to column; pulling items to the top */
 section.blog_posts {
     flex-direction: column;
     justify-content: flex-start;
@@ -335,10 +340,7 @@ section.blog_posts {
     margin: 1em 0;
 }
 
-section.blog_posts , section.skills , article.intro , article.experience {
-    padding: 1em 0;
-}
-
+/* setting flex to the items and adjusting how they wrap */
 .blog_posts .item {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -346,15 +348,14 @@ section.blog_posts , section.skills , article.intro , article.experience {
     align-items: center;
 }
 
+/* Setting the Headline box to grow */
 .blog_posts .item .container {
-    /* width: auto; */
     min-height: 7em;
     flex-grow: 1;
-    /* background-color: rgb(243, 243, 243); */
-    /* border: 0.05em solid rgba(156, 152, 152, 0.5); */
     padding: 0.5em 1em 0.5em 0;
 }
 
+/* Setting background color */
 .background.blog_posts {
     width: 100%;
     height: 100%;
@@ -363,40 +364,37 @@ section.blog_posts , section.skills , article.intro , article.experience {
 
 .blog_posts .item .container a {
     text-decoration: none;
-    decoration: none;
 }
 
 .blog_posts .item .container a:visited {
     text-decoration: none;
-    decoration: none;
     color: black;
-}
-
-/* Recent Blog Posts Images */
-.blog_posts img {
-    width: 9em;
-    height: 9em;
-    border: 0.05em solid rgba(128, 128, 128, 0.3);
-    border-radius: 0.2em;
-    margin-left: 0.2em;
-    display: block;
-}
-
-.blog_posts .item a {
-    display: block;
 }
 
 .posts {
     padding-top: 1em;
 }
 
+/* Setting up blog post Headline images */
+.blog_posts img {
+    width: 9em;
+    height: 9em;
+    border: 0.05em solid rgba(128, 128, 128, 0.3);
+    border-radius: 0.2em;
+    margin-left: 0.2em;
+    /* Image wasn't centering because of inline spacing */
+    display: block;
+}
+
 /* Blog Post Page */
 
 main.blog {
     width: 100%;
-    margin: 3.25em auto 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Setting flex to column, adding spacing */
 .blog section {
     display: flex;
     flex-direction: column;
@@ -408,12 +406,14 @@ main.blog {
     text-align: center;
 }
 
+/* Setting flex to author box */
 .author_details {
     display: flex;
     align-self: flex-start;
     margin: 2em 0;
 }
 
+/* Setting up img from author box */
 .author_details img {
     width: 6em;
     height: 6em;
@@ -425,6 +425,7 @@ main.blog {
     margin: 0.5em 1em;
 }
 
+/* Setting up main post image */
 img.main_post {
     width: 20em;
     height: 20em;
@@ -435,27 +436,28 @@ img.main_post {
     margin: 1em auto;
 }
 
-/* Cantact Me Page */
+/* Contact Me Page */
 
-main.contact_page {
-    display: flex;
-    flex-direction: column;
-}
 
+/* Setting background colors; Setting the message form section to grow and occupy remaining space in the page */
 .background.my_links {
     flex: 0 1 auto;
     background-color: var(--platinum);
 }
-
 .background.message_form {
     background-color: var(--cyan);
     flex: 1 1 auto;
+}
+
+.icon_links {
+    flex-direction: column;
 }
 
 .contact_page h1 {
     text-align: center;
 }
 
+/* Setting spacing for the Icon Links */
 .contact_links {
     display: flex;
     justify-content: space-evenly;
@@ -464,12 +466,14 @@ main.contact_page {
     margin: 0 auto;
 }
 
+/* Setting icon boxes to flex column */
 .contact_links .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Setting Icon images, border and background */
 .contact_page img {
     width: auto;
     height: 10em;
@@ -480,6 +484,7 @@ main.contact_page {
     margin: 1em;
 }
 
+/* Setting inputs size, border and background */
 .contact input {
     width: 100%;
     height: 1.5em;
@@ -489,33 +494,29 @@ main.contact_page {
     margin: 0.5em 0;
 }
 
+/* Setting text area size, border and background */
+.contact textarea {
+    height: 10.5em;
+    width: 100%;
+    border: 0.05em solid rgba(128, 128, 128, 0.4);
+    background-color: whitesmoke;
+    border-radius: 0.3em;
+    margin: 0.5em 0; 
+}
+
+/* Setting submit button width */
 .contact input.send {
     width: 4em;
 }
 
-.my_links .container , form.contact {
+.my_links .icon_links , form.contact {
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-.contact textarea {
-    height: 10.5em;
-    width: 100%;
-    rows: 7;
-    cols: 50;
-    border: 0.05em solid rgba(128, 128, 128, 0.4);
-    background-color: whitesmoke;
-    border-radius: 0.3em;
-    margin: 0.5em 0;
-    
-}
-
 /* Footer Section */
 
-footer {
-    background-color: var(--onyx);
-}
-
+/* Setting spacing of icon links, adjusted for screen size < 520px */
 footer .box1 {
     display: flex;
     justify-content: space-between;
@@ -524,23 +525,53 @@ footer .box1 {
     width: 90%;
 }
 
-footer p {
-    color: white;
-    text-align: center;
-    padding: 1em;
-}
-
+/* Icon Sizing */
 footer .icon img {
     width: 3.5em;
     height: 3.5em;
 }
 
+/* Background color and border for CV icon */
 .cv img {
     background-color: white;
     border: 0 solid;
     border-radius: 0.5em;
 }
 
+footer p {
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+footer {
+    background-color: var(--onyx);
+}
+
+/* Setting Footer to stay at the bottom of the page */
+
+html, body{
+    height:100%;
+}
+
+/* Flex body elements to use Flex grow/shrink */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main set to grow, occupying remaining space in the page */
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* @media screen size responsiveness */
+
+/* Screen width > 350px */
 @media only screen and (min-width: 350px) {
     .landing img {
         width: 20em;
@@ -548,12 +579,15 @@ footer .icon img {
     }
 }
 
+/* Screen width > 520px */
 @media only screen and (min-width: 520px) {
     
+    /* Top clearance from Nav bar */
     main {
         margin-top: 3.6em;
     }
 
+    /* Spacing Nav bar components apart */
     .topnav {
         justify-content: space-between;
     }
@@ -577,7 +611,7 @@ footer .icon img {
     }
 }
 
-/* Resizing Boxes, screen width > 700px */
+/* Screen width > 700px */
 @media only screen and (min-width: 700px)  {
     
     section , form {
@@ -621,7 +655,7 @@ footer .icon img {
     }
 }
 
-/* Resizing Boxes, screen width > 1300px */
+/* Screen width > 1300px */
 @media only screen and (min-width: 1300px)  {
     
     section , form {
@@ -638,9 +672,6 @@ footer .icon img {
 
     h1 {
         font-size: 2em;
-    }
-
-    main.blog {
     }
 
     .blog_posts section , .blog section {
